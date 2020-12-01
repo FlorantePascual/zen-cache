@@ -5,7 +5,7 @@ import { DataService } from '../core/data.service';
 export class CacheService {
 
   constructor(private ds: DataService) {
-    ds.initializeDocumentCache();
+    ds.initializeDocumentCache(); // override capacity and ttl here
     this.scheduleCleanCache();
   }
 
